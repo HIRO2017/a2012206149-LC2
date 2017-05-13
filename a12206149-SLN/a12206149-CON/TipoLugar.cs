@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_CON
 {
-    class TipoLugar
+    public class TipoLugar
     {
     }
 }

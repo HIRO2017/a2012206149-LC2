@@ -10,7 +10,8 @@ namespace a12206149_PER.Repositories
     public class UnityOfWork : IUnityOfWork
     {
         private readonly a12206149DbContext _DbContext;
-
+        private static UnityOfWork _Instance;
+        private static readonly object _Lock = new object();
         public IAdministrativoRepository Administrativos { get; private set; }
 
         public IBusRepository Buss { get; private set; }
@@ -64,18 +65,34 @@ namespace a12206149_PER.Repositories
             Ventas = new VentaRepository(_DbContext);
 
         }
+
+        //IMPLEMENTACION DEL PATRON SINGLETON PARA INSTANCIAR LA CLASE UNITYOFWORK , CON ESTE PATRON SE ASEGURA QUE EN CUALQUIER
+        //PARTE DEL CODIGO QUE SE QUIERA INSTANCIA LA B.D, SE DEVUELVA UNA UNICA REFERENCIA
+        public static UnityOfWork Instance
+        {
+            get
+            {
+                //VARIABLE DE CONTROL PARA MANEJAR EL ACCESO CONCURRENTE AL INSTANCIAMIENTO DE LA CLASE UNITYOFWORK
+                lock(_Lock)
+                {
+                    if (_Instance == null)
+                        _Instance = new UnityOfWork();
+                }
+                return _Instance;
+            }
+        }
             
 
 
       
-        void IDisposable.Dispose()
+        public void Dispose()
         {
-            throw new NotImplementedException();
+            _DbContext.Dispose();
         }
 
-        int IUnityOfWork.SaveChanges()
+        public int SaveChanges()
         {
-            throw new NotImplementedException();
+            return  _DbContext.SaveChanges();
         }
     }
 }

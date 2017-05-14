@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_PER.EntytiTypeConfiguration
 {
-    public class AdministrativoConfiguration : 
+    public class AdministrativoConfiguration
     { 
     }
 }

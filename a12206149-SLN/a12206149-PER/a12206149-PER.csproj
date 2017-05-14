@@ -30,7 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="a12206149Context.cs" />
+    <Compile Include="a12206149DbContext.cs" />
     <Compile Include="EntytiTypeConfiguration\AdministrativoConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\BusConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\ClienteConfiguration.cs" />
@@ -56,8 +63,21 @@
     <Compile Include="EntytiTypeConfiguration\TransporteConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\TripulacionConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\VentaConfiguration.cs" />
+    <Compile Include="Migrations\201705140645355_InitialModel.cs" />
+    <Compile Include="Migrations\201705140645355_InitialModel.Designer.cs">
+      <DependentUpon>201705140645355_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705140647091_ACT.cs" />
+    <Compile Include="Migrations\201705140647091_ACT.Designer.cs">
+      <DependentUpon>201705140647091_ACT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\a12206149-ENT\a12206149-ENT.csproj">
@@ -66,7 +86,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <EmbeddedResource Include="Migrations\201705140645355_InitialModel.resx">
+      <DependentUpon>201705140645355_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705140647091_ACT.resx">
+      <DependentUpon>201705140647091_ACT.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

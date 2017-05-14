@@ -85,6 +85,10 @@
     <Compile Include="Repositories\TipoLugarRepository.cs" />
     <Compile Include="Repositories\TipoPagoRepository.cs" />
     <Compile Include="Repositories\TipoTripulacionRepository.cs" />
+    <Compile Include="Repositories\TipoViajeRepository.cs" />
+    <Compile Include="Repositories\TransporteRepository.cs" />
+    <Compile Include="Repositories\TripulacionRepository.cs" />
+    <Compile Include="Repositories\VentaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

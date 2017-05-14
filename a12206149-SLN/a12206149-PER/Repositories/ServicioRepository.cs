@@ -10,5 +10,15 @@ namespace a12206149_PER.Repositories
 {
     public class ServicioRepository : Repository<Servicio>, IServicioRepository
     {
+        private readonly a12206149DbContext _DbContext;
+
+        public ServicioRepository(a12206149DbContext dbContext)
+        {
+            _DbContext = dbContext;
+
+        }
+
+        private ServicioRepository() { }
+
     }
 }

@@ -61,6 +61,7 @@
     <Compile Include="IRepositories\ITipoViajeRepository.cs" />
     <Compile Include="IRepositories\ITransporteRepository.cs" />
     <Compile Include="IRepositories\ITripulacionRepository.cs" />
+    <Compile Include="IRepositories\IUnityOfWork.cs" />
     <Compile Include="IRepositories\IVentaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Servicio.cs" />

@@ -10,5 +10,13 @@ namespace a12206149_PER.Repositories
 {
     public class TipoLugarRepository : Repository<TipoLugar>, ITipoLugarRepository
     {
+        private readonly a12206149DbContext _DbContext;
+
+        public TipoLugarRepository(a12206149DbContext dbContext)
+        {
+            _DbContext = dbContext;
+        }
+
+        private TipoLugarRepository() { }
     }
 }

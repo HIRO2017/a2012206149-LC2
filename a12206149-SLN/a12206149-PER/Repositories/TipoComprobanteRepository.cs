@@ -10,5 +10,14 @@ namespace a12206149_PER.Repositories
 {
     public class TipoComprobanteRepository : Repository<TipoComprobante>, ITipoComprobanteRepository
     {
+        private readonly a12206149DbContext _DbContext;
+
+        public TipoComprobanteRepository(a12206149DbContext dbContext)
+        {
+            _DbContext = dbContext;
+        }
+
+
+        private TipoComprobanteRepository() { }
     }
 }

@@ -10,5 +10,16 @@ namespace a12206149_PER.Repositories
 {
     public class EncomiendaRepository : Repository<Encomienda>, IEncomiendaRepository
     {
+        private readonly a12206149DbContext _DbContext;
+
+        public EncomiendaRepository(a12206149DbContext dbContext)
+        {
+            _DbContext = dbContext;
+        }
+
+        private EncomiendaRepository()
+        {
+
+        }
     }
 }

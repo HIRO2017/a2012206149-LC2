@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_PER
 {
-    public class Class1
+    public class a12206149Context
     {
     }
 }

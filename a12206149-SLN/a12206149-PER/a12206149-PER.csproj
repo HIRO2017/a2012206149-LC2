@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="a12206149Context.cs" />
     <Compile Include="EntytiTypeConfiguration\AdministrativoConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\BusConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\ClienteConfiguration.cs" />

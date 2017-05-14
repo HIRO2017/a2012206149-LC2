@@ -40,22 +40,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrativo.cs" />
-    <Compile Include="Bus.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Empleado.cs" />
-    <Compile Include="Encomienda.cs" />
-    <Compile Include="LugarViaje.cs" />
+    <Compile Include="Entities\Administrativo.cs" />
+    <Compile Include="Entities\Bus.cs" />
+    <Compile Include="Entities\Cliente.cs" />
+    <Compile Include="Entities\Empleado.cs" />
+    <Compile Include="Entities\Encomienda.cs" />
+    <Compile Include="Entities\LugarViaje.cs" />
+    <Compile Include="IRepositories\IAdministradorRepository.cs" />
+    <Compile Include="IRepositories\IBusRepository.cs" />
+    <Compile Include="IRepositories\IClienteRepository.cs" />
+    <Compile Include="IRepositories\IEmpleadoRepository.cs" />
+    <Compile Include="IRepositories\IEncomiendaRepository.cs" />
+    <Compile Include="IRepositories\ILugarViajeRepository.cs" />
+    <Compile Include="IRepositories\IRepository.cs" />
+    <Compile Include="IRepositories\IServicioRepository.cs" />
+    <Compile Include="IRepositories\ITipoComprobanteRepository.cs" />
+    <Compile Include="IRepositories\ITipoLugarRepository.cs" />
+    <Compile Include="IRepositories\ITipoPagoRepository.cs" />
+    <Compile Include="IRepositories\ITipoTripulacionRepository.cs" />
+    <Compile Include="IRepositories\ITipoViajeRepository.cs" />
+    <Compile Include="IRepositories\ITransporteRepository.cs" />
+    <Compile Include="IRepositories\ITripulacionRepository.cs" />
+    <Compile Include="IRepositories\IVentaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servicio.cs" />
-    <Compile Include="TipoComprobante.cs" />
-    <Compile Include="TipoLugar.cs" />
-    <Compile Include="TipoPago.cs" />
-    <Compile Include="TipoTripulacion.cs" />
-    <Compile Include="TipoViaje.cs" />
-    <Compile Include="Transporte.cs" />
-    <Compile Include="Tripulacion.cs" />
-    <Compile Include="Venta.cs" />
+    <Compile Include="Entities\Servicio.cs" />
+    <Compile Include="Entities\TipoComprobante.cs" />
+    <Compile Include="Entities\TipoLugar.cs" />
+    <Compile Include="Entities\TipoPago.cs" />
+    <Compile Include="Entities\TipoTripulacion.cs" />
+    <Compile Include="Entities\TipoViaje.cs" />
+    <Compile Include="Entities\Transporte.cs" />
+    <Compile Include="Entities\Tripulacion.cs" />
+    <Compile Include="Entities\Venta.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

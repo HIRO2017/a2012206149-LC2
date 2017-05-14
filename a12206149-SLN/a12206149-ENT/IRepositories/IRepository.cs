@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_ENT
+namespace a12206149_ENT.IRepositories
 {
-    class Tripulacion
+    public interface IRepository
     {
     }
 }

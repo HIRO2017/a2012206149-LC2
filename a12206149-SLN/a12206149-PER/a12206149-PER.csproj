@@ -58,5 +58,11 @@
     <Compile Include="EntytiTypeConfiguration\VentaConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\a12206149-ENT\a12206149-ENT.csproj">
+      <Project>{43b0dd67-707b-448e-bbf9-09842866d453}</Project>
+      <Name>a12206149-ENT</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

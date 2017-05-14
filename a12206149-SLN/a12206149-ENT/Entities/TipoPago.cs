@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_ENT
+namespace a12206149_ENT.ENT.Entities
 {
-    public class Empleado
+    public class TipoPago
     {
-        public int EmpleadoId { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.IRepositories
 {
-    public interface ITipoTripulacionRepository
+    public interface ITipoTripulacionRepository : IRepository
     {
     }
 }

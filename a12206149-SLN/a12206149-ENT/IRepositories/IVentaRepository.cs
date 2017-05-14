@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.IRepositories
 {
-    public interface IVentaRepository
+    public interface IVentaRepository : IRepository
     {
     }
 }

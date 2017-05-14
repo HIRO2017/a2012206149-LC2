@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.IRepositories
 {
-    public interface IAdministradorRepository
+    public interface IAdministradorRepository :  IRepository
     {
     }
 }

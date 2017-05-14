@@ -46,7 +46,7 @@
     <Compile Include="Entities\Empleado.cs" />
     <Compile Include="Entities\Encomienda.cs" />
     <Compile Include="Entities\LugarViaje.cs" />
-    <Compile Include="IRepositories\IAdministradorRepository.cs" />
+    <Compile Include="IRepositories\IAdministrativoRepository.cs" />
     <Compile Include="IRepositories\IBusRepository.cs" />
     <Compile Include="IRepositories\IClienteRepository.cs" />
     <Compile Include="IRepositories\IEmpleadoRepository.cs" />

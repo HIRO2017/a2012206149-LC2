@@ -73,7 +73,18 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AdministrativoRepository.cs" />
+    <Compile Include="Repositories\BusRepository.cs" />
+    <Compile Include="Repositories\ClienteRepository.cs" />
+    <Compile Include="Repositories\EmpleadoRepository.cs" />
+    <Compile Include="Repositories\EncomiendaRepository.cs" />
+    <Compile Include="Repositories\LugarViajeRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\ServicioRepository.cs" />
+    <Compile Include="Repositories\TipoComprobanteRepository.cs" />
+    <Compile Include="Repositories\TipoLugarRepository.cs" />
+    <Compile Include="Repositories\TipoPagoRepository.cs" />
+    <Compile Include="Repositories\TipoTripulacionRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

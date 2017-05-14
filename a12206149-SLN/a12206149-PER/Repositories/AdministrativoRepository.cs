@@ -10,5 +10,14 @@ namespace a12206149_PER.Repositories
 {
     public class AdministrativoRepository : Repository<Administrativo>, IAdministrativoRepository
     {
+        IEnumerable<Administrativo> IAdministrativoRepository.GetAdministativoByEmpeledo(Empleado Empleado)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerable<Administrativo> IAdministrativoRepository.GetAdministrativosWithEmpleado(int pageIndex, int pageSize)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

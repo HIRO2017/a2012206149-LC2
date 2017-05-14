@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_CON
+namespace a12206149_PER
 {
-    class TipoPago
+    public class Class1
     {
     }
 }

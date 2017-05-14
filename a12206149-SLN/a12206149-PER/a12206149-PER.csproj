@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{041B7EF2-6292-4FAD-8856-E7C76305A8D0}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>a12206149_CON</RootNamespace>
-    <AssemblyName>a12206149-CON</AssemblyName>
+    <ProjectGuid>{612AEA19-6E33-4A14-B159-7131705C0416}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>a12206149_PER</RootNamespace>
+    <AssemblyName>a12206149-PER</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,10 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="EntytiTypeConfiguration\AdministrativoConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\BusConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\ClienteConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\EmpleadoConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\EncomiendaConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\LugarViajeConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\ServicioConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\TipoComprobanteConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\TipoLugarConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\TipoPagoConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\TipoTripulacionConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\TipoViajeConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\TransporteConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\TripulacionConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\VentaConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,5 +8,6 @@ namespace a12206149_ENT.ENT.Entities
 {
     public class Servicio
     {
+        public string Tipo { get; set; }
     }
 }

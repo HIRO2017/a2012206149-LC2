@@ -8,7 +8,8 @@ namespace a12206149_ENT.ENT.Entities
 {
     public class Bus
     {
-        public Tripulacion Tripulacion { get; set; }
+        public Tripulacion Tripulacion { get; set; } 
+        public int BusId { get; set; }
 
         public Bus()
         {

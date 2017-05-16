@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace a12206149_PER.EntytiTypeConfiguration
 {
-    class VentaConfiguration
+    public class VentaConfiguration
     {
+
     }
 }

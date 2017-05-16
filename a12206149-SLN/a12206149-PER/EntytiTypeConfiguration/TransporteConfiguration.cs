@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_PER.EntytiTypeConfiguration
 {
-    class TransporteConfiguration
+    public class TransporteConfiguration
     {
     }
 }

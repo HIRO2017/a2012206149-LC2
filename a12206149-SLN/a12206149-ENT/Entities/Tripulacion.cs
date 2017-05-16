@@ -8,11 +8,15 @@ namespace a12206149_ENT.ENT.Entities
 {
     public class Tripulacion : Empleado
     {
+        public int TripulacionId { get; set; }
         public TipoTripulacion TipoTripulacion { get; set; }
 
         public Tripulacion()
         {
             TipoTripulacion = new TipoTripulacion();
         }
+
+
+
     }
 }

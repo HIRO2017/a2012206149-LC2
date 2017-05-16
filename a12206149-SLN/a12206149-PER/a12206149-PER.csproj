@@ -53,6 +53,7 @@
     <Compile Include="EntytiTypeConfiguration\ClienteConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\EmpleadoConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\EncomiendaConfiguration.cs" />
+    <Compile Include="EntytiTypeConfiguration\EntryPointNotFoundException.cs" />
     <Compile Include="EntytiTypeConfiguration\LugarViajeConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\ServicioConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\TipoComprobanteConfiguration.cs" />

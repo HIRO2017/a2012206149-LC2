@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_PER.EntytiTypeConfiguration
 {
-    public class VentaConfiguration
+    public class VentaConfiguration : EntryPointNotFoundException<VentaConfiguration>
     {
         AdministrativoConfiguration Administrativo = new AdministrativoConfiguration();
 

@@ -8,5 +8,12 @@ namespace a12206149_PER.EntytiTypeConfiguration
 {
     public class LugarViajeConfiguration
     {
+        TipoLugarConfiguration tiplug = new TipoLugarConfiguration();
+
+        class TipoLugarConfiguration
+        {
+            public string NombreLugar { get; set; }
+            public int LugarCodigo { get; set; }
+        }
     }
 }

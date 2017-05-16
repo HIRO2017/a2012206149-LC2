@@ -8,11 +8,6 @@ namespace a12206149_PER.EntytiTypeConfiguration
 {
     public class BusConfiguration
     {
-
+       
     }
-
-   
-
-
-    
 }

@@ -48,12 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="a12206149DbContext.cs" />
-    <Compile Include="EntytiTypeConfiguration\AdministrativoConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\BusConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\ClienteConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\EmpleadoConfiguration.cs" />
-    <Compile Include="EntytiTypeConfiguration\EncomiendaConfiguration.cs" />
-    <Compile Include="EntytiTypeConfiguration\EntryPointNotFoundException.cs" />
     <Compile Include="EntytiTypeConfiguration\LugarViajeConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\ServicioConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\TipoComprobanteConfiguration.cs" />
@@ -61,8 +58,6 @@
     <Compile Include="EntytiTypeConfiguration\TipoPagoConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\TipoTripulacionConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\TipoViajeConfiguration.cs" />
-    <Compile Include="EntytiTypeConfiguration\TransporteConfiguration.cs" />
-    <Compile Include="EntytiTypeConfiguration\TripulacionConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\VentaConfiguration.cs" />
     <Compile Include="Migrations\201705140645355_InitialModel.cs" />
     <Compile Include="Migrations\201705140645355_InitialModel.Designer.cs">

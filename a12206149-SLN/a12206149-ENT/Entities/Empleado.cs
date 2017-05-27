@@ -9,5 +9,7 @@ namespace a12206149_ENT.ENT.Entities
     public class Empleado
     {
         public int EmpleadoId { get; set; }
+        public  string Nombre { get; set; }
+        
     }
 }

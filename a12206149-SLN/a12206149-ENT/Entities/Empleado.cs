@@ -12,7 +12,7 @@ namespace a12206149_ENT.ENT.Entities
         public  string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string Direccion { get; set; }
-        public int numEmpl { get; set; }x
+        public int numEmpl { get; set; }
         
     }
 }

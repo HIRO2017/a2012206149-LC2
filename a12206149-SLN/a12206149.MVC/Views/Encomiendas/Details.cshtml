@@ -1,0 +1,35 @@
+﻿@model a12206149_ENT.ENT.Entities.Encomienda
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Encomienda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoEncomienda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoEncomienda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.destinoEncomienda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.destinoEncomienda)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.encomiendaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

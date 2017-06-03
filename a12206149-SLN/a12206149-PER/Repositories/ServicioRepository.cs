@@ -20,5 +20,9 @@ namespace a12206149_PER.Repositories
 
         private ServicioRepository() { }
 
+        public Servicio Get(int? id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

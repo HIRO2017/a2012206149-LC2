@@ -9,5 +9,6 @@ namespace a12206149_ENT.IRepositories
 {
     public interface IServicioRepository : IRepository<Servicio>
     {
+        Servicio Get(int? id);
     }
 }

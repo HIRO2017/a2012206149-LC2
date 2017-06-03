@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using a12206149_ENT.ENT.Entities;
 
 namespace a12206149_PER.Repositories
 {
@@ -81,10 +82,12 @@ namespace a12206149_PER.Repositories
                 return _Instance;
             }
         }
-            
 
+        public void StateModified(Servicio servicio)
+        {
+            throw new NotImplementedException();
+        }
 
-      
         public void Dispose()
         {
             _DbContext.Dispose();

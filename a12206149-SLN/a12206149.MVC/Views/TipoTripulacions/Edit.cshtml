@@ -1,4 +1,4 @@
-﻿@model a12206149_ENT.ENT.Entities.Empleado
+﻿@model a12206149_ENT.ENT.Entities.TipoTripulacion
 
 @{
     ViewBag.Title = "Edit";
@@ -13,16 +13,16 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Empleado</h4>
+        <h4>TipoTripulacion</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.EmpleadoId)
+        @Html.HiddenFor(model => model.TipoTripulacionId)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.nombreTipoTripulacion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.nombreTipoTripulacion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nombreTipoTripulacion, "", new { @class = "text-danger" })
             </div>
         </div>
 

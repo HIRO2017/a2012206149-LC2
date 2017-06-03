@@ -1,0 +1,35 @@
+﻿@model a12206149_ENT.ENT.Entities.Servicio
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Servicio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreServicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreServicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoServicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoServicio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.servicioId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,35 @@
+﻿@model a12206149_ENT.ENT.Entities.Transporte
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transporte</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreTransporte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreTransporte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionTransporte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionTransporte)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.transporteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

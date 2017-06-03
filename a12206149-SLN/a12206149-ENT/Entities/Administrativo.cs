@@ -9,8 +9,7 @@ namespace a12206149_ENT.ENT.Entities
     public class Administrativo
     {
         public int AdministradorId { get; set; }
-
         public double sueldo{ get; set; }
-       
+        
     }
 }

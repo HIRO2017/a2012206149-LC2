@@ -11,8 +11,8 @@ namespace a12206149_PER.EntytiTypeConfiguration
     {
         public TipoTripulacionConfiguration()
         {
-            ToTable("Tipo Tripulacion");
-            HasKey(c => c.TipoTripulacionId);
+       //     ToTable("Tipo Tripulacion");
+     //       HasKey(c => c.TipoTripulacionId);
 
         }
     }

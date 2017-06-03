@@ -8,6 +8,6 @@ namespace a12206149_ENT.ENT.Entities
 {
     public class Cliente
     {
-        public 
+       
     }
 }

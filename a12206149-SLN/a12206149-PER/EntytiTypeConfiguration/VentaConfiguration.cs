@@ -43,12 +43,12 @@ namespace a12206149_PER.EntytiTypeConfiguration
             public string Nombrelugarviaje { get; set; }
 
         }
-        AdministrativoConfiguration Administrativo = new AdministrativoConfiguration();
+        //AdministrativoConfiguration Administrativo = new AdministrativoConfiguration();
 
-        class AdministrativoConfiguration
-        {
-            public string Nombrelugarviaje { get; set; }
+        //class AdministrativoConfiguration
+        //{
+          //  public string Nombrelugarviaje { get; set; }
 
-        }
+        //}
     }
 }

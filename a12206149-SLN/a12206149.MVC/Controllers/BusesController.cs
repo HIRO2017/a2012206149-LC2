@@ -13,7 +13,7 @@ namespace a12206149.MVC.Controllers
 {
     public class BusesController : Controller
     {
-        private a12206149DbContext db = new a12206149DbContext();
+       private a12206149DbContext db = new a12206149DbContext();
 
         // GET: Buses
         public ActionResult Index()

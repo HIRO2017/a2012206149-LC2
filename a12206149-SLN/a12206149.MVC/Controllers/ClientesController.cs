@@ -8,17 +8,25 @@ using System.Web;
 using System.Web.Mvc;
 using a12206149_ENT.ENT.Entities;
 using a12206149_PER;
+using a12206149_PER.Repositories;
 
 namespace a12206149.MVC.Controllers
 {
     public class ClientesController : Controller
     {
-        private a12206149DbContext db = new a12206149DbContext();
+        //private a12206149DbContext db = new a12206149DbContext();
+
+        private readonly UnityOfWork _UnityOfWOrk;
+        private ClientesController(UnityOfWork unityOfWork)
+        {
+            _UnityOfWOrk = unityOfWork;
+        }
 
         // GET: Clientes
         public ActionResult Index()
         {
-            return View(db.Clientes.ToList());
+            //return View(db.Clientes.ToList());
+            return View(_UnityOfWOrk.Clientes.GetAll());
         }
 
         // GET: Clientes/Details/5
@@ -28,7 +36,8 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Cliente cliente = db.Clientes.Find(id);
+            //Cliente cliente = db.Clientes.Find(id);
+            Cliente cliente = _UnityOfWOrk.Clientes.Get(id);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -51,8 +60,10 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Clientes.Add(cliente);
-                db.SaveChanges();
+                //db.Clientes.Add(cliente);
+                _UnityOfWOrk.Clientes.Add(cliente);
+                //db.SaveChanges();
+                _UnityOfWOrk.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +77,8 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Cliente cliente = db.Clientes.Find(id);
+            //Cliente cliente = db.Clientes.Find(id);
+            Cliente cliente = _UnityOfWOrk.Clientes.Get(id);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -83,8 +95,10 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(cliente).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(cliente).State = EntityState.Modified;
+                _UnityOfWOrk.StateModified(cliente);
+                //db.SaveChanges();
+                _UnityOfWOrk.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(cliente);
@@ -97,7 +111,8 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Cliente cliente = db.Clientes.Find(id);
+            //Cliente cliente = db.Clientes.Find(id);
+            Cliente cliente = _UnityOfWOrk.Clientes.Get(id);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -110,9 +125,12 @@ namespace a12206149.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Cliente cliente = db.Clientes.Find(id);
-            db.Clientes.Remove(cliente);
-            db.SaveChanges();
+            //Cliente cliente = db.Clientes.Find(id);
+            Cliente cliente = _UnityOfWOrk.Clientes.Get(id);
+            //db.Clientes.Remove(cliente);
+            _UnityOfWOrk.Clientes.Delete(cliente);
+            //db.SaveChanges();
+            _UnityOfWOrk.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -120,7 +138,8 @@ namespace a12206149.MVC.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                //db.Dispose();
+                _UnityOfWOrk.Dispose();
             }
             base.Dispose(disposing);
         }

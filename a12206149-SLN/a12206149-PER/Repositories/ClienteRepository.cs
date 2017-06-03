@@ -21,5 +21,10 @@ namespace a12206149_PER.Repositories
         {
 
         }
+
+        public Cliente Get(int? id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

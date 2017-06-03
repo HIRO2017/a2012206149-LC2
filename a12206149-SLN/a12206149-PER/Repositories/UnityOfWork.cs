@@ -83,6 +83,11 @@ namespace a12206149_PER.Repositories
             }
         }
 
+        public void StateModified(Cliente cliente)
+        {
+            throw new NotImplementedException();
+        }
+
         public void StateModified(Servicio servicio)
         {
             throw new NotImplementedException();

@@ -9,5 +9,6 @@ namespace a12206149_ENT.IRepositories
 {
     public interface IClienteRepository : IRepository<Cliente>
     {
+        Cliente Get(int? id);
     }
 }

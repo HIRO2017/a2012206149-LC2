@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="a12206149DbContext.cs" />
+    <Compile Include="EntytiTypeConfiguration\AdministradorConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\BusConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\ClienteConfiguration.cs" />
     <Compile Include="EntytiTypeConfiguration\EmpleadoConfiguration.cs" />

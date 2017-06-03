@@ -8,5 +8,7 @@ namespace a12206149_ENT.ENT.Entities
 {
     public class TipoLugar
     {
+        public int tipoLugarId { get; set; }
+        public string nombreTipoLugar { get; set; }
     }
 }

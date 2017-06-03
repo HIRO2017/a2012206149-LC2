@@ -8,5 +8,8 @@ namespace a12206149_ENT.ENT.Entities
 {
     public class TipoComprobante
     {
+        public string NombreTipo { get; set; }
+        public string descripcion { get; set; }
+
     }
 }

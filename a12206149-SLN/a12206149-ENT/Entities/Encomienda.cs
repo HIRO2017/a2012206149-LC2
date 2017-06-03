@@ -6,23 +6,15 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.ENT.Entities
 {
-    public class Encomienda : Servicio
+    public class Encomienda 
     {
-        public LugarViaje LugarViaje { get; set; }
-        public Bus Bus { get; set; }
+        public int encomiendaId { get; set; }
+        public string tipoEncomienda { get; set; }
+        public string destinoEncomienda { get; set; }
+        
+      
 
 
-        private Encomienda()
-        {
-            LugarViaje = new LugarViaje();
-        }
-
-        public Encomienda(Bus bus)
-        {
-            LugarViaje = new LugarViaje();
-            Bus = bus;
-        }
-
-        public string Beneficiario { get; set; }
+       
     }
 }

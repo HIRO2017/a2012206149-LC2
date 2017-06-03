@@ -6,17 +6,11 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.ENT.Entities
 {
-    public class Tripulacion : Empleado
+    public class Tripulacion
     {
-        public int Tipo { get; set; }
         
-        //TipoTripolucion
         public int TipoTripulacionId { get; set; }
-        public TipoTripulacion TipoTripulacion { get; set; }
-
-        
-
-
+        public string nombreTripulacion { get; set; }
 
     }
 }

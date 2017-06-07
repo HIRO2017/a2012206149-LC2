@@ -48,6 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmpleadoDbContext.cs" />
+    <Compile Include="EntityTypeConfiguration\BusConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\ClienteConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\EmpleadoConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\LugarViajeConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\ServicioConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\TipoComprobanteConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\TipoLugarConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\TipoPagoConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\TipoTripulacionConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\TipoViajeConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\VentaConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

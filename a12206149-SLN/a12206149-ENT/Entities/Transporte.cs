@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_ENT
+namespace a12206149_ENT.Entities
 {
-    public class Class1
+    public class Transporte : Servicio
     {
     }
 }

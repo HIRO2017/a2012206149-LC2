@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.IRepositories
 {
-    interface IEmpleadoRepository : IRepository
+    public interface IEmpleadoRepository : IRepository<Empleado>
     {
+        IEnumerable<Empleado> GetEmpleadoWithTransporte(int pageIndex, int pageSize);
+
+
+
     }
 }

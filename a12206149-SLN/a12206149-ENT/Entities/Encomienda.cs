@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.Entities
 {
-    public class Encomienda : Servicio
+    public class Encomienda 
     {
+        public int encomiendaId { get; set; }
     }
 }

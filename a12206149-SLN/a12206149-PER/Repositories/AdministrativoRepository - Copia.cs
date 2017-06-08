@@ -8,13 +8,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_PER.Repositories
 {
-    public class BusRepository : Repository<Bus>, IBusRepository
+    public class AdministrativoRepository : Repository<Administrativo>, IAdministrativoRepository
     {
-        private EmpleadoDbContext _Context;
-
-        public BusRepository(EmpleadoDbContext context)
-        {
-            _Context = context;
-        }
     }
 }

@@ -57,6 +57,7 @@
     <Compile Include="Entities\Venta.cs" />
     <Compile Include="IRepositories\IAdministrativoRepository.cs" />
     <Compile Include="IRepositories\IBusRepository.cs" />
+    <Compile Include="IRepositories\IClienteRepository.cs" />
     <Compile Include="IRepositories\IEmpleadoRepository.cs" />
     <Compile Include="IRepositories\IEncomiendaRepository.cs" />
     <Compile Include="IRepositories\ILugarViajeRepository.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="IRepositories\ITipoViajeRepository.cs" />
     <Compile Include="IRepositories\ITransporteRepository.cs" />
     <Compile Include="IRepositories\ITripulacionRepository.cs" />
+    <Compile Include="IRepositories\IUnityOfWork.cs" />
     <Compile Include="IRepositories\IVentaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

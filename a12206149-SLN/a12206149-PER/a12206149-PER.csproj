@@ -64,6 +64,8 @@
     <Compile Include="EntityTypeConfiguration\TripulacionConfiguration.cs" />
     <Compile Include="EntityTypeConfiguration\VentaConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ClienteRepository.cs" />
+    <Compile Include="Repositories\UnityOfWork.cs" />
     <Compile Include="Repositories\AdministrativoRepository.cs" />
     <Compile Include="Repositories\BusRepository.cs" />
     <Compile Include="Repositories\EmpleadoRepository.cs" />

@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace a12206149_PER.Repositories
 {
-    public class TipoViajeRepository : Repository<TipoViaje>, ITipoViajeRepository
+    public class ClienteRepository : Repository<Cliente>, IClienteRepository
     {
         private EmpleadoDbContext _Context;
 
-        public TipoViajeRepository(EmpleadoDbContext context)
+        public ClienteRepository(EmpleadoDbContext context)
         {
             _Context = context;
         }

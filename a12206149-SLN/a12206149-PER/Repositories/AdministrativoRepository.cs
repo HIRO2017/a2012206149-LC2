@@ -10,5 +10,11 @@ namespace a12206149_PER.Repositories
 {
     public class AdministrativoRepository : Repository<Administrativo>, IAdministrativoRepository
     {
+        private EmpleadoDbContext _Context;
+
+        public AdministrativoRepository(EmpleadoDbContext context)
+        {
+            _Context = context;
+        }
     }
 }

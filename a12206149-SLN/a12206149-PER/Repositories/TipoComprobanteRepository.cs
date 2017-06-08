@@ -10,5 +10,11 @@ namespace a12206149_PER.Repositories
 {
     public class TipoComprobanteRepository : Repository<TipoComprobante>, ITipoComprobanteRepository
     {
+        private EmpleadoDbContext _Context;
+
+        public TipoComprobanteRepository(EmpleadoDbContext context)
+        {
+            _Context = context;
+        }
     }
 }

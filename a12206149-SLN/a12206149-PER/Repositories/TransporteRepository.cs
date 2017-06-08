@@ -10,5 +10,11 @@ namespace a12206149_PER.Repositories
 {
     public class TransporteRepository : Repository<Transporte>, ITransporteRepository
     {
+        private EmpleadoDbContext _Context;
+
+        public TransporteRepository(EmpleadoDbContext context)
+        {
+            _Context = context;
+        }
     }
 }

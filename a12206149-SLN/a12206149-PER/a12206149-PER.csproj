@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33039893-7D66-46ED-911C-49F4FB4BCDEC}</ProjectGuid>
+    <ProjectGuid>{5DCBCA41-F7C8-4B71-A3A5-8B2282927CF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>a12206149_PER</RootNamespace>
@@ -47,50 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmpleadoDbContext.cs" />
-    <Compile Include="EntityTypeConfiguration\AdministrativoConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\BusConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\ClienteConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\EmpleadoConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\EncomiendaConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\LugarViajeConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\ServicioConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\TipoComprobanteConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\TipoLugarConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\TipoPagoConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\TipoTripulacionConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\TipoViajeConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\TransporteConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\TripulacionConfiguration.cs" />
-    <Compile Include="EntityTypeConfiguration\VentaConfiguration.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ClienteRepository.cs" />
-    <Compile Include="Repositories\UnityOfWork.cs" />
-    <Compile Include="Repositories\AdministrativoRepository.cs" />
-    <Compile Include="Repositories\BusRepository.cs" />
-    <Compile Include="Repositories\EmpleadoRepository.cs" />
-    <Compile Include="Repositories\EncomiendaRepository.cs" />
-    <Compile Include="Repositories\LugarViajeRepository.cs" />
-    <Compile Include="Repositories\Repository.cs" />
-    <Compile Include="Repositories\ServicioRepository.cs" />
-    <Compile Include="Repositories\TipoComprobanteRepository.cs" />
-    <Compile Include="Repositories\TipoLugarRepository.cs" />
-    <Compile Include="Repositories\TipoPagoRepository.cs" />
-    <Compile Include="Repositories\TipoTripulacionRepository.cs" />
-    <Compile Include="Repositories\TipoViajeRepository.cs" />
-    <Compile Include="Repositories\TransporteRepository.cs" />
-    <Compile Include="Repositories\TripulacionRepository.cs" />
-    <Compile Include="Repositories\VentaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\a12206149-ENT\a12206149-ENT.csproj">
-      <Project>{ce2eda6b-274e-4f64-bcf0-55fce4c9793e}</Project>
-      <Name>a12206149-ENT</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

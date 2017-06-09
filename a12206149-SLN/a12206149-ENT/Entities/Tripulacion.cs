@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.Entities
 {
-    public class Tripulacion
+    class Tripulacion
     {
-        public int tripulacionId { get; set; }
     }
 }

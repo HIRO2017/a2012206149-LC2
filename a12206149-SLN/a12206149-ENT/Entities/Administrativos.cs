@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.Entities
 {
-    public class TipoComprobante
+    class Administrativos
     {
-        public int tipoComprobanteId { get; set; }
-
-        public string nombreComprobante { get; set; }
     }
 }

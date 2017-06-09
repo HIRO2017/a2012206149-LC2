@@ -10,5 +10,14 @@ namespace a12206149_PER.Repositories
 {
     public class AdministrartivoRepository : Repository<Administrativo>, IAdministrativoRepository
     {
+        IEnumerable<Administrativo> IAdministrativoRepository.GetAdministrativoByClassification(Empleado empleado)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerable<Administrativo> IAdministrativoRepository.GetAdministrativoWhthTransporte(int pageIndex, int pageSize)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

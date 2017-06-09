@@ -61,6 +61,7 @@
     <Compile Include="IRepositories\IEmpleadoRepository.cs" />
     <Compile Include="IRepositories\IEncomiendaRepository.cs" />
     <Compile Include="IRepositories\ILugarViajeRepository.cs" />
+    <Compile Include="IRepositories\IUnityOfWork.cs" />
     <Compile Include="IRepositories\IVentaRepository.cs" />
     <Compile Include="IRepositories\IRepository.cs" />
     <Compile Include="IRepositories\IServicioRepository.cs" />

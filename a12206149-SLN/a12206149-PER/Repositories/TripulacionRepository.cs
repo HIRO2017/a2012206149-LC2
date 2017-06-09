@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_PER
+namespace a12206149_PER.Repositories
 {
-    public class Class1
+    class TripulacionRepository
     {
     }
 }

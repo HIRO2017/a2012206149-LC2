@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.Entities
 {
-    class Tripulacion
+    public class Tripulacion : Empleado
     {
+        public int BusId { get; set; }
+        public Bus Bus { get; set; }
+
+        public TipoTripulacion TipoTripulacion { get; set; }
+
     }
 }

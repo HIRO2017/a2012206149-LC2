@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_ENT.Enum
+namespace a12206149_ENT.IRepositories
 {
-    public enum TipoLugar
+    public interface IVentaRepository
     {
-        provincia, capital
     }
 }

@@ -47,12 +47,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="a12206149DbContext.cs" />
+    <Compile Include="EntitiesConfiguration\BusConfiguration.cs" />
+    <Compile Include="EntitiesConfiguration\ClienteConfiguration.cs" />
+    <Compile Include="EntitiesConfiguration\EmpleadoConfiguration.cs" />
+    <Compile Include="EntitiesConfiguration\LugarViajeConfiguration.cs" />
+    <Compile Include="EntitiesConfiguration\ServicioConfiguration.cs" />
+    <Compile Include="EntitiesConfiguration\VentaConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AdministrativosRepository.cs" />
+    <Compile Include="Repositories\BusRepository.cs" />
+    <Compile Include="Repositories\ClienteRepository.cs" />
+    <Compile Include="Repositories\EncomiendaRepository.cs" />
+    <Compile Include="Repositories\LugarViajeRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\TransporteRepository.cs" />
+    <Compile Include="Repositories\TripulacionRepository.cs" />
+    <Compile Include="Repositories\UnityOfWork.cs" />
+    <Compile Include="Repositories\VentaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\a12206149-ENT\a12206149-ENT.csproj">
+      <Project>{8c05619a-03ce-41bf-a242-c5482277876a}</Project>
+      <Name>a12206149-ENT</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

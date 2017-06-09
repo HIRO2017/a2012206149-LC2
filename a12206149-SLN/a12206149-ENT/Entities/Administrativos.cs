@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.Entities
 {
-    class Administrativos
+    public class Administrativo : Empleado
     {
+
+        public string Cargo { get; set; }
+
+        public int VentaId { get; set; }
+        public Venta Venta { get; set; }
+
     }
 }

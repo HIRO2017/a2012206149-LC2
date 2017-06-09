@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_ENT.Enum
+namespace a12206149_PER.Repositories
 {
-    public enum TipoLugar
+    class LugarViajeRepository
     {
-        provincia, capital
     }
 }

@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.Entities
 {
-    class Servicio
+    public abstract class Servicio
     {
+        public int ServicioId { get; set; }
+        public string NombreServicio { get; set; }
+        public decimal Tarifa { get; set; }
+
+        public int VentaId { get; set; }
+        public Venta Venta { get; set; }
+
+
     }
 }

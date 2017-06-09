@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.Enum
 {
-    class TipoViaje
+    public enum TipoViaje
     {
+        vip, economico
     }
 }

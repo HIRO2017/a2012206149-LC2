@@ -10,5 +10,15 @@ namespace a12206149_PER.EntitiesConfiguration
 {
     public class EncomiendaConfiguration : EntityTypeConfiguration<Encomienda>
     {
+        public LugarViajeConfiguration()
+        {
+            //Table configurations
+            ToTable("LugarViaje");
+            HasKey(c => c.LugarViajeId);
+            //Property(c => c.Placa).IsRequired().HasMaxLength(15);
+
+            //Relationships Configurations
+
+        }
     }
 }

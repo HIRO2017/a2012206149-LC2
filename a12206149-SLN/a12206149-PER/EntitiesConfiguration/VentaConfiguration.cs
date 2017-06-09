@@ -10,5 +10,15 @@ namespace a12206149_PER.EntitiesConfiguration
 {
     public class VentaConfiguration : EntityTypeConfiguration<Venta>
     {
+        public VentaConfiguration()
+        {
+            //Table configurations
+            ToTable("Serivicio");
+            HasKey(c => c.VentaId);
+            //Property(c => c.Placa).IsRequired().HasMaxLength(15);
+
+            //Relationships Configurations
+
+        }
     }
 }

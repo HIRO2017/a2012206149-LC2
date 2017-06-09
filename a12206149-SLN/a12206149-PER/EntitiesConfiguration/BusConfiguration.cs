@@ -10,5 +10,15 @@ namespace a12206149_PER.EntitiesConfiguration
 {
     public class BusConfiguration : EntityTypeConfiguration<Bus>
     {
+        public BusConfiguration()
+        {
+            //Table configurations
+            ToTable("Bus");
+            HasKey(c => c.BusId);
+            //Property(c => c.Placa).IsRequired().HasMaxLength(15);
+
+            //Relationships Configurations
+
+        }
     }
 }

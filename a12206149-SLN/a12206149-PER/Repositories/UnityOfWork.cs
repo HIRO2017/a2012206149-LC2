@@ -77,14 +77,14 @@ namespace a12206149_PER.Repositories
         }
 
 
-        void Dispose()
+        public void Dispose()
         {
-            throw new NotImplementedException();
+            _Context.Dispose();
         }
 
-        int SaveChange()
+        public int SaveChange()
         {
-            throw new NotImplementedException();
+           return  _Context.SaveChanges();
         }
     }
 }

@@ -10,5 +10,15 @@ namespace a12206149_PER.EntitiesConfiguration
 {
     public class ServicioConfiguration : EntityTypeConfiguration<Servicio>
     {
+        public ServicioConfiguration()
+        {
+            //Table configurations
+            ToTable("Serivicio");
+            HasKey(c => c.ServicioId);
+            //Property(c => c.Placa).IsRequired().HasMaxLength(15);
+
+            //Relationships Configurations
+
+        }
     }
 }

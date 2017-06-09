@@ -10,6 +10,13 @@ namespace a12206149_PER.Repositories
 {
     public class AdministrartivoRepository : Repository<Administrativo>, IAdministrativoRepository
     {
+        private a12206149DbContext _Context;
+
+        public AdministrartivoRepository(a12206149DbContext context)
+        {
+            _Context = context;
+        }
+
         IEnumerable<Administrativo> IAdministrativoRepository.GetAdministrativoByClassification(Empleado empleado)
         {
             throw new NotImplementedException();

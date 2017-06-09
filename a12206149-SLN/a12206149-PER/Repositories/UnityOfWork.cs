@@ -10,6 +10,8 @@ namespace a12206149_PER.Repositories
     public class UnityOfWork : IUnityOfWork
     {
         private readonly a12206149DbContext _Context;
+        private static UnityOfWork _Instance;
+        private static readonly object _Lock = new object();
 
         public IAdministrativoRepository Administrativos { get; private set; }
 
@@ -23,11 +25,11 @@ namespace a12206149_PER.Repositories
 
         public ILugarViajeRepository LugarViajes { get; private set; }
 
-        public IServicioRepository Iervicios { get; private set; }
+        public IServicioRepository Servicios { get; private set; }
 
         public ITipoPagoRepository TipoPagos { get; private set; }
 
-        public ITipoTripulacionRepository ipoTripulaciones { get; private set; }
+        public ITipoTripulacionRepository TipoTripulaciones { get; private set; }
 
         public ITipoViajeRepository TipoViajes { get; private set; }
 
@@ -35,22 +37,55 @@ namespace a12206149_PER.Repositories
 
         public ITripulacionRepository Tripulacion { get; private set; }
 
-        public  IVentaRepository Ventas { get; private set; }
+        public IVentaRepository Ventas { get; private set; }
+
+
 
 
         private UnityOfWork()
         {
             _Context = new a12206149DbContext();
+
+            Administrativos = new AdministrartivoRepository(_Context);
+            Buses = new BusRepository(_Context);
+            Clientes = new ClienteRepository(_Context);
+            Empleados = new EmpleadoRepository(_Context);
+            Encomiendas = new EncomiendaRepository(_Context);
+            LugarViajes = new LugarViajeRepository(_Context);
+            TipoPagos = new TipoPagoRepository(_Context);
+            TipoViajes = new TipoViajeRepository(_Context);
+            Transporte = new TransporteRepository(_Context);
+            Tripulacion = new TripulacionRepository(_Context);
+            Ventas = new VentaRepository(_Context);
+            TipoTripulaciones = new TipoTripulacionRepository(_Context);
+
         }
 
-        void IDisposable.Dispose()
+
+        public static UnityOfWork Instance
+        {
+            get
+            {
+                lock (_Lock)
+                {
+                    if (_Instance == null)
+                        _Instance = new UnityOfWork();
+                }
+
+                return _Instance;
+            }
+        }
+
+
+        void Dispose()
         {
             throw new NotImplementedException();
         }
 
-        int IUnityOfWork.SaveChange()
+        int SaveChange()
         {
             throw new NotImplementedException();
         }
     }
 }
+    

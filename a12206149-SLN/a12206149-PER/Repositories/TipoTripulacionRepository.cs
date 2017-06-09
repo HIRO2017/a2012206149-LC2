@@ -10,5 +10,11 @@ namespace a12206149_PER.Repositories
 {
     public class TipoTripulacionRepository : Repository<TipoTripulacion>, ITipoTripulacionRepository
     {
+        private a12206149DbContext _Context;
+
+        public TipoTripulacionRepository(a12206149DbContext context)
+        {
+            _Context = context;
+        }
     }
 }

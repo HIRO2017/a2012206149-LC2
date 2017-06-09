@@ -10,5 +10,11 @@ namespace a12206149_PER.Repositories
 {
     public class TipoViajeRepository : Repository<TipoViaje>, ITipoViajeRepository
     {
+        private a12206149DbContext _Context;
+
+        public TipoViajeRepository(a12206149DbContext context)
+        {
+            _Context = context;
+        }
     }
 }

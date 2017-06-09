@@ -10,5 +10,11 @@ namespace a12206149_PER.Repositories
 {
     public class TipoPagoRepository : Repository<TipoPago>, ITipoPagoRepository
     {
+        private a12206149DbContext _Context;
+
+        public TipoPagoRepository(a12206149DbContext context)
+        {
+            _Context = context;
+        }
     }
 }

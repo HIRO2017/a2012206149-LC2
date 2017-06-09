@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_PER.EntitiesConfiguration
+namespace a12206149_ENT.Entities
 {
-    class ServicioConfiguration
+    public class TipoLugar
     {
+        public int tipoLugarId { get; set; }
     }
 }

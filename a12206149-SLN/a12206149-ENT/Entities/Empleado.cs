@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.Entities
 {
-    public abstract class Empleado
+    public class Empleado
     {
-        public int EmpleadoId { get; set; }
-        public string Nombre { get; set; }
-        public string Apellidos { get; set; }
-        public string DNI { get; set; }
-        public int Edad { get; set; }
-        public decimal Sueldo { get; set; }
+
+        public int empleadoId { get; set; }
+        public string nombre { get; set; }
+        public string direccion { get; set; }
     }
 }

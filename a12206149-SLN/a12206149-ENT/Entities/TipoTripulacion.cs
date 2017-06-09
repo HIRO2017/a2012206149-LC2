@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_PER.Repositories
+namespace a12206149_ENT.Entities
 {
-    class AdministrativoRepository
+    public class TipoTripulacion
     {
+        public int tipoTripulacionId { get; set; }
     }
 }

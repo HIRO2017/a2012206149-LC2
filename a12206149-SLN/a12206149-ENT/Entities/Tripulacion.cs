@@ -1,5 +1,4 @@
-﻿using a12206149_ENT.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace a12206149_ENT.Entities
 {
-    public class Tripulacion : Empleado
+    public class Tripulacion
     {
-        public int BusId { get; set; }
-        public Bus Bus { get; set; }
-
-        public TipoTripulacion TipoTripulacion { get; set; }
-
+        public int tripulacionId { get; set; }
     }
 }

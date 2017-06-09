@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_ENT.Enums
+namespace a12206149_ENT.Entities
 {
-    public enum TipoViaje
+    public class TipoComprobante
     {
-        vip, economico
+        public int tipoComprobanteId { get; set; }
     }
 }

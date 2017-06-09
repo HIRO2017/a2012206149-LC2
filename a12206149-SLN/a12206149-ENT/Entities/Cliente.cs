@@ -13,11 +13,7 @@ namespace a12206149_ENT.Entities
         public string Apellidos { get; set; }
         public string DNI { get; set; }
 
-        public int VentaId { get; set; }
-        public Administrativo Venta { get; set; }
-
-        public int TransporteId { get; set; }
-        public Transporte Transporte { get; set; }
+        
 
     }
 }

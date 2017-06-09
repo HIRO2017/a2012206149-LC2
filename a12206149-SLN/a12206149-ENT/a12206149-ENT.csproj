@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7D228C1D-4006-410F-AD28-5E3A196DBAAB}</ProjectGuid>
+    <ProjectGuid>{1D44BC91-5382-4FE9-9CCC-9E9B9A75BF8A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>a12206149_ENT</RootNamespace>
@@ -47,25 +47,14 @@
     <Compile Include="Entities\Encomienda.cs" />
     <Compile Include="Entities\LugarViaje.cs" />
     <Compile Include="Entities\Servicio.cs" />
+    <Compile Include="Entities\TipoComprobante.cs" />
+    <Compile Include="Entities\TipoLugar.cs" />
+    <Compile Include="Entities\TipoPago.cs" />
+    <Compile Include="Entities\TipoTripulacion.cs" />
+    <Compile Include="Entities\TipoViaje.cs" />
     <Compile Include="Entities\Transporte.cs" />
     <Compile Include="Entities\Tripulacion.cs" />
     <Compile Include="Entities\Venta.cs" />
-    <Compile Include="Enums\TipoComprobante.cs" />
-    <Compile Include="Enums\TipoLugar.cs" />
-    <Compile Include="Enums\TipoPago.cs" />
-    <Compile Include="Enums\TipoTripulacion.cs" />
-    <Compile Include="Enums\TipoViaje.cs" />
-    <Compile Include="IRepositories\IAdministrativoRepository.cs" />
-    <Compile Include="IRepositories\IBusRepository.cs" />
-    <Compile Include="IRepositories\IClienteRepository.cs" />
-    <Compile Include="IRepositories\IEncomiendaRepository.cs" />
-    <Compile Include="IRepositories\ILugarRepository.cs" />
-    <Compile Include="IRepositories\ILugarViajeRepository.cs" />
-    <Compile Include="IRepositories\IRepository.cs" />
-    <Compile Include="IRepositories\ITransporteRepository.cs" />
-    <Compile Include="IRepositories\ITripulacionRepository.cs" />
-    <Compile Include="IRepositories\IUnityOfWork.cs" />
-    <Compile Include="IRepositories\IVentaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

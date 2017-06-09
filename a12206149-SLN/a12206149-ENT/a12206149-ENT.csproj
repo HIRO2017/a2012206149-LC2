@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C05619A-03CE-41BF-A242-C5482277876A}</ProjectGuid>
+    <ProjectGuid>{7D228C1D-4006-410F-AD28-5E3A196DBAAB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>a12206149_ENT</RootNamespace>
@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Administrativos.cs" />
+    <Compile Include="Entities\Administrativo.cs" />
     <Compile Include="Entities\Bus.cs" />
     <Compile Include="Entities\Cliente.cs" />
     <Compile Include="Entities\Empleado.cs" />
@@ -50,13 +50,13 @@
     <Compile Include="Entities\Transporte.cs" />
     <Compile Include="Entities\Tripulacion.cs" />
     <Compile Include="Entities\Venta.cs" />
-    <Compile Include="Enum\TipoComprobante.cs" />
-    <Compile Include="Enum\TipoLugar.cs" />
-    <Compile Include="Enum\TipoPago.cs" />
-    <Compile Include="Enum\TipoTripulacion.cs" />
-    <Compile Include="Enum\TipoViaje.cs" />
-    <Compile Include="IRepositories\IBusRepository.cs" />
+    <Compile Include="Enums\TipoComprobante.cs" />
+    <Compile Include="Enums\TipoLugar.cs" />
+    <Compile Include="Enums\TipoPago.cs" />
+    <Compile Include="Enums\TipoTripulacion.cs" />
+    <Compile Include="Enums\TipoViaje.cs" />
     <Compile Include="IRepositories\IAdministrativoRepository.cs" />
+    <Compile Include="IRepositories\IBusRepository.cs" />
     <Compile Include="IRepositories\IClienteRepository.cs" />
     <Compile Include="IRepositories\IEncomiendaRepository.cs" />
     <Compile Include="IRepositories\ILugarRepository.cs" />

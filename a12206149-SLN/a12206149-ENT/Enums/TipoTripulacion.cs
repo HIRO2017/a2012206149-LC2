@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_ENT.Enum
+namespace a12206149_ENT.Enums
 {
-    public enum TipoViaje
+    public enum TipoTripulacion
     {
-        vip, economico
+        A, B, C
     }
 }

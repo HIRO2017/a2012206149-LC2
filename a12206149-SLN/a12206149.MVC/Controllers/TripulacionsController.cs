@@ -8,17 +8,24 @@ using System.Web;
 using System.Web.Mvc;
 using a12206149_ENT.Entities;
 using a12206149_PER;
+using a12206149_ENT.IRepositories;
 
 namespace a12206149.MVC.Controllers
 {
     public class TripulacionsController : Controller
     {
-        private a12206149DbContext db = new a12206149DbContext();
+        //private a12206149DbContext db = new a12206149DbContext();
+        private readonly IUnityOfWork _UnityOfWork;
 
+
+        public TripulacionsController(IUnityOfWork unityOfWork)
+        {
+            _UnityOfWork = unityOfWork;
+        }
         // GET: Tripulacions
         public ActionResult Index()
         {
-            return View(db.Tripulaciones.ToList());
+            return View(_UnityOfWork.Tripulaciones.GetAll());
         }
 
         // GET: Tripulacions/Details/5
@@ -28,7 +35,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tripulacion tripulacion = db.Tripulaciones.Find(id);
+            Tripulacion tripulacion = _UnityOfWork.Tripulaciones.Get(id);
             if (tripulacion == null)
             {
                 return HttpNotFound();
@@ -51,8 +58,8 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Tripulaciones.Add(tripulacion);
-                db.SaveChanges();
+                _UnityOfWork.Tripulaciones.Add(tripulacion);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +73,8 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tripulacion tripulacion = db.Tripulaciones.Find(id);
+            Tripulacion tripulacion = _UnityOfWork.Tripulaciones.Get(id);
+
             if (tripulacion == null)
             {
                 return HttpNotFound();
@@ -83,8 +91,8 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tripulacion).State = EntityState.Modified;
-                db.SaveChanges();
+                _UnityOfWork.StateModified(tripulacion);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(tripulacion);
@@ -97,7 +105,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tripulacion tripulacion = db.Tripulaciones.Find(id);
+            Tripulacion tripulacion = _UnityOfWork.Tripulaciones.Get(id);
             if (tripulacion == null)
             {
                 return HttpNotFound();
@@ -110,9 +118,10 @@ namespace a12206149.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Tripulacion tripulacion = db.Tripulaciones.Find(id);
-            db.Tripulaciones.Remove(tripulacion);
-            db.SaveChanges();
+            Tripulacion tripulacion = _UnityOfWork.Tripulaciones.Get(id);
+
+            _UnityOfWork.Tripulaciones.Remove(tripulacion);
+            _UnityOfWork.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -120,7 +129,7 @@ namespace a12206149.MVC.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _UnityOfWork.Dispose();
             }
             base.Dispose(disposing);
         }

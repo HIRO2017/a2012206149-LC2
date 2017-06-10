@@ -8,17 +8,25 @@ using System.Web;
 using System.Web.Mvc;
 using a12206149_ENT.Entities;
 using a12206149_PER;
+using a12206149_ENT.IRepositories;
 
 namespace a12206149.MVC.Controllers
 {
     public class TransportesController : Controller
     {
-        private a12206149DbContext db = new a12206149DbContext();
+        //private a12206149DbContext db = new a12206149DbContext();
 
+        private readonly IUnityOfWork _UnityOfWork;
+
+
+        public TransportesController(IUnityOfWork unityOfWork)
+        {
+            _UnityOfWork = unityOfWork;
+        }
         // GET: Transportes
         public ActionResult Index()
         {
-            return View(db.Transportes.ToList());
+            return View(_UnityOfWork.Transportes.GetAll());
         }
 
         // GET: Transportes/Details/5
@@ -28,7 +36,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Transporte transporte = db.Transportes.Find(id);
+            Transporte transporte = _UnityOfWork.Transportes.Get(id);
             if (transporte == null)
             {
                 return HttpNotFound();
@@ -51,8 +59,8 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Transportes.Add(transporte);
-                db.SaveChanges();
+                _UnityOfWork.Transportes.Add(transporte);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +74,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Transporte transporte = db.Transportes.Find(id);
+            Transporte transporte = _UnityOfWork.Transportes.Get(id);
             if (transporte == null)
             {
                 return HttpNotFound();
@@ -83,8 +91,8 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(transporte).State = EntityState.Modified;
-                db.SaveChanges();
+                _UnityOfWork.StateModified(transporte);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(transporte);
@@ -97,7 +105,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Transporte transporte = db.Transportes.Find(id);
+            Transporte transporte = _UnityOfWork.Transportes.Get(id);
             if (transporte == null)
             {
                 return HttpNotFound();
@@ -110,9 +118,9 @@ namespace a12206149.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Transporte transporte = db.Transportes.Find(id);
-            db.Transportes.Remove(transporte);
-            db.SaveChanges();
+            Transporte transporte = _UnityOfWork.Transportes.Get(id);
+            _UnityOfWork.Transportes.Remove(transporte);
+            _UnityOfWork.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -120,7 +128,7 @@ namespace a12206149.MVC.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _UnityOfWork.Dispose();
             }
             base.Dispose(disposing);
         }

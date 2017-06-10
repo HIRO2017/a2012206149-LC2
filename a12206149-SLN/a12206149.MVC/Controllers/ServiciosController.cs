@@ -8,17 +8,24 @@ using System.Web;
 using System.Web.Mvc;
 using a12206149_ENT.Entities;
 using a12206149_PER;
+using a12206149_ENT.IRepositories;
 
 namespace a12206149.MVC.Controllers
 {
     public class ServiciosController : Controller
     {
-        private a12206149DbContext db = new a12206149DbContext();
+        //private a12206149DbContext db = new a12206149DbContext();
+        private readonly IUnityOfWork _UnityOfWork;
 
+
+        public ServiciosController(IUnityOfWork unityOfWork)
+        {
+            _UnityOfWork = unityOfWork;
+        }
         // GET: Servicios
         public ActionResult Index()
         {
-            return View(db.Servicios.ToList());
+            return View(_UnityOfWork.Servicios.GetAll());
         }
 
         // GET: Servicios/Details/5
@@ -28,7 +35,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servicio servicio = db.Servicios.Find(id);
+            Servicio servicio = _UnityOfWork.Servicios.Get(id);
             if (servicio == null)
             {
                 return HttpNotFound();
@@ -51,8 +58,8 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Servicios.Add(servicio);
-                db.SaveChanges();
+                _UnityOfWork.Servicios.Add(servicio);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +73,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servicio servicio = db.Servicios.Find(id);
+            Servicio servicio = _UnityOfWork.Servicios.Get(id);
             if (servicio == null)
             {
                 return HttpNotFound();
@@ -83,8 +90,8 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(servicio).State = EntityState.Modified;
-                db.SaveChanges();
+                _UnityOfWork.StateModified(servicio);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(servicio);
@@ -97,7 +104,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Servicio servicio = db.Servicios.Find(id);
+            Servicio servicio = _UnityOfWork.Servicios.Get(id);
             if (servicio == null)
             {
                 return HttpNotFound();
@@ -110,9 +117,9 @@ namespace a12206149.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Servicio servicio = db.Servicios.Find(id);
-            db.Servicios.Remove(servicio);
-            db.SaveChanges();
+            Servicio servicio = _UnityOfWork.Servicios.Get(id);
+            _UnityOfWork.Servicios.Remove(servicio);
+            _UnityOfWork.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -120,7 +127,7 @@ namespace a12206149.MVC.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _UnityOfWork.Dispose();
             }
             base.Dispose(disposing);
         }

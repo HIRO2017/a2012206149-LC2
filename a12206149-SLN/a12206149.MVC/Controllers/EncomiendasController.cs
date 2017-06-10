@@ -8,17 +8,24 @@ using System.Web;
 using System.Web.Mvc;
 using a12206149_ENT.Entities;
 using a12206149_PER;
+using a12206149_ENT.IRepositories;
 
 namespace a12206149.MVC.Controllers
 {
     public class EncomiendasController : Controller
     {
-        private a12206149DbContext db = new a12206149DbContext();
+        //private a12206149DbContext db = new a12206149DbContext();
+        private readonly IUnityOfWork _UnityOfWork;
 
+
+        public EncomiendasController(IUnityOfWork unityOfWork)
+        {
+            _UnityOfWork = unityOfWork;
+        }
         // GET: Encomiendas
         public ActionResult Index()
         {
-            return View(db.Encomiendas.ToList());
+            return View(_UnityOfWork.Encomiendas.GetAll());
         }
 
         // GET: Encomiendas/Details/5
@@ -28,7 +35,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Encomienda encomienda = db.Encomiendas.Find(id);
+            Encomienda encomienda = _UnityOfWork.Encomiendas.Get(id);
             if (encomienda == null)
             {
                 return HttpNotFound();
@@ -51,8 +58,8 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Encomiendas.Add(encomienda);
-                db.SaveChanges();
+                _UnityOfWork.StateModified(encomienda);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +73,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Encomienda encomienda = db.Encomiendas.Find(id);
+            Encomienda encomienda = _UnityOfWork.Encomiendas.Get(id);
             if (encomienda == null)
             {
                 return HttpNotFound();
@@ -83,8 +90,8 @@ namespace a12206149.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(encomienda).State = EntityState.Modified;
-                db.SaveChanges();
+                _UnityOfWork.StateModified(encomienda);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(encomienda);
@@ -97,7 +104,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Encomienda encomienda = db.Encomiendas.Find(id);
+            Encomienda encomienda = _UnityOfWork.Encomiendas.Get(id);
             if (encomienda == null)
             {
                 return HttpNotFound();
@@ -110,9 +117,9 @@ namespace a12206149.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Encomienda encomienda = db.Encomiendas.Find(id);
-            db.Encomiendas.Remove(encomienda);
-            db.SaveChanges();
+            Encomienda encomienda = _UnityOfWork.Encomiendas.Get(id);
+           _UnityOfWork.Encomiendas.Remove(encomienda);
+            _UnityOfWork.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -120,7 +127,7 @@ namespace a12206149.MVC.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _UnityOfWork.Dispose();
             }
             base.Dispose(disposing);
         }

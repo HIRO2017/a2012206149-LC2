@@ -11,6 +11,7 @@ namespace a12206149_PER
     public class a12206149DbContext : DbContext
     {
         public DbSet<Venta> Ventas { get; set; }
+        public DbSet<Empleado> Empleados { get; set; }
     }
 }
     

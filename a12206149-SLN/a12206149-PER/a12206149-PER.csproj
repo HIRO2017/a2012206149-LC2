@@ -48,9 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="a12206149DbContext.cs" />
-    <Compile Include="Migrations\201706100145221_Initial.cs" />
-    <Compile Include="Migrations\201706100145221_Initial.Designer.cs">
-      <DependentUpon>201706100145221_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201706100155337_Initial.cs" />
+    <Compile Include="Migrations\201706100155337_Initial.Designer.cs">
+      <DependentUpon>201706100155337_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706100157263_agregar empleado.cs" />
+    <Compile Include="Migrations\201706100157263_agregar empleado.Designer.cs">
+      <DependentUpon>201706100157263_agregar empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,8 +70,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706100145221_Initial.resx">
-      <DependentUpon>201706100145221_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706100155337_Initial.resx">
+      <DependentUpon>201706100155337_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706100157263_agregar empleado.resx">
+      <DependentUpon>201706100157263_agregar empleado.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

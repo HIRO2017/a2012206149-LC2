@@ -7,13 +7,13 @@ namespace a12206149_PER.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Initial : IMigrationMetadata
+    public sealed partial class agregarempleado : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(agregarempleado));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706100145221_Initial"; }
+            get { return "201706100157263_agregar empleado"; }
         }
         
         string IMigrationMetadata.Source

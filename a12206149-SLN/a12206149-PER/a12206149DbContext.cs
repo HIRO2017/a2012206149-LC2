@@ -1,5 +1,6 @@
 ﻿using a12206149_ENT;
 using a12206149_ENT.Entities;
+using a12206149_PER.EntityTypeConfiguration;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -20,6 +21,25 @@ namespace a12206149_PER
         public DbSet<Transporte> Transportes { get; set; }
         public DbSet<Tripulacion> Tripulaciones { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+
+
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new AdministrativoConfiguration());
+            modelBuilder.Configurations.Add(new BusConfiguration());
+            modelBuilder.Configurations.Add(new ClienteConfiguration());
+            modelBuilder.Configurations.Add(new EmpleadoConfiguration());
+            modelBuilder.Configurations.Add(new EncomiendaConfiguration());
+            modelBuilder.Configurations.Add(new ServicioConfiguration());
+            modelBuilder.Configurations.Add(new TransporteConfiguration());
+            modelBuilder.Configurations.Add(new TripulacionConfiguration());
+            modelBuilder.Configurations.Add(new VentasConfiguration());
+
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
     

@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8FC52103-F7C5-4A7B-A87B-6C94C3ADD2CC}</ProjectGuid>
+    <ProjectGuid>{D2A14945-D4FA-4C8F-8C2A-7E7FB80FDC90}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -211,6 +211,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\a12206149-ENT\a12206149-ENT.csproj">
       <Project>{22be0954-07bf-4f0d-bb28-ec8ecfb90e40}</Project>
       <Name>a12206149-ENT</Name>
@@ -236,7 +239,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>60565</DevelopmentServerPort>
+          <DevelopmentServerPort>60876</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:53303/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

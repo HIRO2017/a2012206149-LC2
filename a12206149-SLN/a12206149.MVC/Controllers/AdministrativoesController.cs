@@ -8,17 +8,26 @@ using System.Web;
 using System.Web.Mvc;
 using a12206149_ENT.Entities;
 using a12206149_PER;
+using a12206149_ENT.IRepositories;
 
 namespace a12206149.MVC.Controllers
 {
     public class AdministrativoesController : Controller
     {
-        private a12206149DbContext db = new a12206149DbContext();
+        //private a12206149DbContext db = new a12206149DbContext();
+
+        private readonly IUnityOfWork _UnityOfWork;
+
+       
+        public AdministrativoesController(IUnityOfWork unityOfWork)
+        {
+            _UnityOfWork = unityOfWork;
+        }
 
         // GET: Administrativoes
         public ActionResult Index()
         {
-            return View(db.Administrativos.ToList());
+            return View(_UnityOfWork.Administrativos.GetAll());
         }
 
         // GET: Administrativoes/Details/5
@@ -28,7 +37,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Administrativo administrativo = db.Administrativos.Find(id);
+            Administrativo administrativo = _UnityOfWork.Administrativos.Get(id);
             if (administrativo == null)
             {
                 return HttpNotFound();
@@ -47,12 +56,12 @@ namespace a12206149.MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "administrativoId,nombre,apellidos,celular")] Administrativo administrativo)
+        public ActionResult Create([Bind(Include = "administrativoId,nombre,apellidos,celular,sexo")] Administrativo administrativo)
         {
             if (ModelState.IsValid)
             {
-                db.Administrativos.Add(administrativo);
-                db.SaveChanges();
+                _UnityOfWork.Administrativos.Add(administrativo);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +75,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Administrativo administrativo = db.Administrativos.Find(id);
+            Administrativo administrativo = _UnityOfWork.Administrativos.Get(id);
             if (administrativo == null)
             {
                 return HttpNotFound();
@@ -79,12 +88,12 @@ namespace a12206149.MVC.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "administrativoId,nombre,apellidos,celular")] Administrativo administrativo)
+        public ActionResult Edit([Bind(Include = "administrativoId,nombre,apellidos,celular,sexo")] Administrativo administrativo)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(administrativo).State = EntityState.Modified;
-                db.SaveChanges();
+                _UnityOfWork.StateModified(administrativo);
+                _UnityOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(administrativo);
@@ -97,7 +106,7 @@ namespace a12206149.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Administrativo administrativo = db.Administrativos.Find(id);
+            Administrativo administrativo = _UnityOfWork.Administrativos.Get(id);
             if (administrativo == null)
             {
                 return HttpNotFound();
@@ -110,9 +119,9 @@ namespace a12206149.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Administrativo administrativo = db.Administrativos.Find(id);
-            db.Administrativos.Remove(administrativo);
-            db.SaveChanges();
+            Administrativo administrativo = _UnityOfWork.Administrativos.Get(id);
+            _UnityOfWork.Administrativos.Remove(administrativo);
+            _UnityOfWork.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -120,7 +129,7 @@ namespace a12206149.MVC.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _UnityOfWork.Dispose();
             }
             base.Dispose(disposing);
         }

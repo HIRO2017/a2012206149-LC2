@@ -18,7 +18,7 @@ namespace a12206149_ENT.IRepositories
         ITripulacionRepository Tripulaciones { get; }
 
 
-        int SaveChange();
+        int SaveChanges();
 
         void StateModified(object entity);
     }

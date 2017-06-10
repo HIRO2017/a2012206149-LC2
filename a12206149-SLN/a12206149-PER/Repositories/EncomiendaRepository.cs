@@ -10,7 +10,6 @@ namespace a12206149_PER.Repositories
 {
     public class EncomiendaRepository : Repository<Encomienda>, IEncomiendaRepository
     {
-        private readonly a12206149DbContext _Context;
 
         public EncomiendaRepository(a12206149DbContext context) : base(context)
         {

@@ -10,7 +10,7 @@ namespace a12206149_PER.Repositories
 {
     public class EmpleadoRepository : Repository<Empleado>, IEmpleadoRepository
     {
-        private readonly a12206149DbContext _Context;
+        
 
         public EmpleadoRepository(a12206149DbContext context) : base(context)
         {

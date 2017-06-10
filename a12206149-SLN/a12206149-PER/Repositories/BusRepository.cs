@@ -10,7 +10,7 @@ namespace a12206149_PER.Repositories
 {
     public class BusRepository : Repository<Bus>, IBusRepository
     {
-        private readonly a12206149DbContext _Context;
+        
 
         public BusRepository(a12206149DbContext context) : base(context)
         {

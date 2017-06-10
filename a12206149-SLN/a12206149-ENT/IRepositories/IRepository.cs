@@ -9,6 +9,9 @@ namespace a12206149_ENT.IRepositories
 {
     public interface IRepository<TEntity> where TEntity : class
     {
+
+        IQueryable<TEntity> GetEntity();
+
         //CREATES
         void Add(TEntity entity);
         void AddRange(IEnumerable<TEntity> entities);
@@ -18,12 +21,36 @@ namespace a12206149_ENT.IRepositories
         IEnumerable<TEntity> GetAll();
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
 
-        //UPDATES
-        void Update(TEntity entity);
-        void UpdateRange(IEnumerable<TEntity> entities);
-
         //DELETES
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
+
+
+
+
+
+
+
+
+
+
+
+
+        //CREATES
+        // void Add(TEntity entity);
+        // void AddRange(IEnumerable<TEntity> entities);
+
+        //READS
+        // TEntity Get(int? id);
+        // IEnumerable<TEntity> GetAll();
+        //  IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
+
+        //UPDATES
+        // void Update(TEntity entity);
+        // void UpdateRange(IEnumerable<TEntity> entities);
+
+        //DELETES
+        // void Remove(TEntity entity);
+        // void RemoveRange(IEnumerable<TEntity> entities);
     }
 }

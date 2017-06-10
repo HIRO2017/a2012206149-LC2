@@ -10,8 +10,8 @@ namespace a12206149_PER.Repositories
     public class UnityOfWork : IUnityOfWork
     {
         private readonly a12206149DbContext _Context;
-        private static UnityOfWork _Instance;
-        public static readonly object _Lock = new object();
+        //private static UnityOfWork _Instance;
+        //public static readonly object _Lock = new object();
 
         public IAdministrativoRepository Administrativos { get; private set; }
 
@@ -32,7 +32,7 @@ namespace a12206149_PER.Repositories
         public IVentaRepository Ventas { get; private set; }
 
 
-        private UnityOfWork()
+        public  UnityOfWork()
         {
             _Context = new a12206149DbContext();
 
@@ -49,28 +49,28 @@ namespace a12206149_PER.Repositories
 
 
 
-        public static UnityOfWork Instance
-        {
-            get
-            {
+        //public static UnityOfWork Instance
+        //{
+          //  get
+          //  {
+
+        //
+            //    lock (_Lock)
+            //    {
+
+             //       if (_Instance == null)
+             //           _Instance = new UnityOfWork();
 
 
-                lock (_Lock)
-                {
-
-                    if (_Instance == null)
-                        _Instance = new UnityOfWork();
+              //  }
 
 
-                }
-
-
-                return _Instance;
-            }
+              //  return _Instance;
+//}
 
 
 
-        }
+       // }
 
 
 
@@ -80,14 +80,14 @@ namespace a12206149_PER.Repositories
             _Context.Dispose();
         }
 
-        public int SaveChange()
+        public int SaveChanges()
         {
           return    _Context.SaveChanges();
         }
 
-        public void StateModified(object entity)
+        public void StateModified(object Entity)
         {
-            throw new NotImplementedException();
+            _Context.Entry(Entity).State = System.Data.Entity.EntityState.Modified;
         }
     }
 }

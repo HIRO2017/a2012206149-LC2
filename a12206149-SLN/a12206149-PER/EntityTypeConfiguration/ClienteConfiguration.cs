@@ -10,5 +10,15 @@ namespace a12206149_PER.EntityTypeConfiguration
 {
     public class ClienteConfiguration : EntityTypeConfiguration<Cliente>
     {
+        public ClienteConfiguration()
+        {
+            //Table configurations
+            ToTable("Cliente");
+            HasKey(c => c.clienteId;
+            //Property(c => c.Placa).IsRequired().HasMaxLength(15);
+
+            //Relationships Configurations
+
+        }
     }
 }

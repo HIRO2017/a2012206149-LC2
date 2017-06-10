@@ -48,6 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="a12206149DbContext.cs" />
+    <Compile Include="EntityTypeConfiguration\AdministrativoConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\BusConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\ClienteConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\EmpleadoConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\EncomiendaConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\ServicioConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\TransporteConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\TripulacionConfiguration.cs" />
+    <Compile Include="EntityTypeConfiguration\VentasConfiguration.cs" />
     <Compile Include="Migrations\201706100155337_Initial.cs" />
     <Compile Include="Migrations\201706100155337_Initial.Designer.cs">
       <DependentUpon>201706100155337_Initial.cs</DependentUpon>

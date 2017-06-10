@@ -49,6 +49,11 @@
     <Compile Include="Entities\Transporte.cs" />
     <Compile Include="Entities\Tripulacion.cs" />
     <Compile Include="Entities\Venta.cs" />
+    <Compile Include="Enum\TipoComprobante.cs" />
+    <Compile Include="Enum\TipoLugar.cs" />
+    <Compile Include="Enum\TipoPago.cs" />
+    <Compile Include="Enum\TipoTripulacion.cs" />
+    <Compile Include="Enum\TipoViaje.cs" />
     <Compile Include="IRepositories\IAdministrativoRepository.cs" />
     <Compile Include="IRepositories\IBusRepository.cs" />
     <Compile Include="IRepositories\IClienteRepository.cs" />

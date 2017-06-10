@@ -11,15 +11,6 @@ namespace a12206149_PER.EntityTypeConfiguration
     public class AdministrativoConfiguration : EntityTypeConfiguration<Administrativo>
     {
 
-        public AdministrativoConfiguration()
-        {
-            //Table configurations
-            ToTable("ADMINISTRATIVO");
-            HasKey(c => c.administrativoId);
-            Property(c => c.apellidos).IsRequired().HasMaxLength(15);
-
-            //Relationships Configurations;
-
-        }
+        
     }
 }

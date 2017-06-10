@@ -12,5 +12,6 @@ namespace a12206149_ENT.Entities
         public string nombre { get; set; }
         public string apellidos { get; set; }
         public int celular { get; set; }
+        public string sexo { get; set; }
     }
 }

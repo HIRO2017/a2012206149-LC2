@@ -161,15 +161,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdministrativoesController.cs" />
-    <Compile Include="Controllers\BusesController.cs" />
-    <Compile Include="Controllers\ClientesController.cs" />
-    <Compile Include="Controllers\EmpleadoesController.cs" />
-    <Compile Include="Controllers\EncomiendasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ServiciosController.cs" />
-    <Compile Include="Controllers\TransportesController.cs" />
-    <Compile Include="Controllers\TripulacionsController.cs" />
-    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

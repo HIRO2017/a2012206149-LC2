@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace a12206149_PER.Repositories
 {
-    public class Repository : IRepository
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
     }
 }

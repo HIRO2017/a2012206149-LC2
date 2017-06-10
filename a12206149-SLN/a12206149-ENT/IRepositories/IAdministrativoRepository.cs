@@ -9,5 +9,8 @@ namespace a12206149_ENT.IRepositories
 {
     public interface IAdministrativoRepository : IRepository<Administrativo>
     {
+        //IEnumerable<Administrativo> GetAdministrativoWithTransporte(int pageIndex, int pageSize);
+
+        //IEnumerable<Administrativo> GetAdministrativoByServicio(Servicio servicio);
     }
 }

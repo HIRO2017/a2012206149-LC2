@@ -10,5 +10,10 @@ namespace a12206149_PER.Repositories
 {
     public class ClienteRepository : Repository<Cliente>, IClienteRepository
     {
+        private readonly a12206149DbContext _Context;
+
+        public ClienteRepository(a12206149DbContext context) : base(context)
+        {
+        }
     }
 }

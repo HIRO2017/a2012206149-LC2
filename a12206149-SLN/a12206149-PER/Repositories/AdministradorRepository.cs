@@ -10,5 +10,10 @@ namespace a12206149_PER.Repositories
 {
     public class AdministradorRepository : Repository<Administrativo>, IAdministrativoRepository
     {
+        private readonly a12206149DbContext _Context;
+
+        public AdministradorRepository(a12206149DbContext context) : base(context)
+        {
+        }
     }
 }

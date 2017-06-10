@@ -10,5 +10,10 @@ namespace a12206149_PER.Repositories
 {
     public class TripulacionRepository : Repository<Tripulacion>, ITripulacionRepository
     {
+        private readonly a12206149DbContext _Context;
+
+        public TripulacionRepository(a12206149DbContext context) : base(context)
+        {
+        }
     }
 }

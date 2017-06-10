@@ -76,6 +76,7 @@
     <Compile Include="Repositories\ServicioRepository.cs" />
     <Compile Include="Repositories\TransporteRepository.cs" />
     <Compile Include="Repositories\TripulacionRepository.cs" />
+    <Compile Include="Repositories\UnityOfWork.cs" />
     <Compile Include="Repositories\VentaRepository.cs" />
   </ItemGroup>
   <ItemGroup>

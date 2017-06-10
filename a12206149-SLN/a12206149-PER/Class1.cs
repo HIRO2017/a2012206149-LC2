@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace a12206149_ENT.Entities
+namespace a12206149_PER
 {
-    public class Tripulacion
+    public class Class1
     {
-        public int tripulacionId { get; set; }
     }
 }

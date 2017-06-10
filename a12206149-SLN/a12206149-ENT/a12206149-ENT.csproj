@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1D44BC91-5382-4FE9-9CCC-9E9B9A75BF8A}</ProjectGuid>
+    <ProjectGuid>{22BE0954-07BF-4F0D-BB28-EC8ECFB90E40}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>a12206149_ENT</RootNamespace>
@@ -40,38 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Administrativo.cs" />
-    <Compile Include="Entities\Bus.cs" />
-    <Compile Include="Entities\Cliente.cs" />
-    <Compile Include="Entities\Empleado.cs" />
-    <Compile Include="Entities\Encomienda.cs" />
-    <Compile Include="Entities\LugarViaje.cs" />
-    <Compile Include="Entities\Servicio.cs" />
-    <Compile Include="Entities\TipoComprobante.cs" />
-    <Compile Include="Entities\TipoLugar.cs" />
-    <Compile Include="Entities\TipoPago.cs" />
-    <Compile Include="Entities\TipoTripulacion.cs" />
-    <Compile Include="Entities\TipoViaje.cs" />
-    <Compile Include="Entities\Transporte.cs" />
-    <Compile Include="Entities\Tripulacion.cs" />
-    <Compile Include="Entities\Venta.cs" />
-    <Compile Include="IRepositories\IAdministrativoRepository.cs" />
-    <Compile Include="IRepositories\IBusRepository.cs" />
-    <Compile Include="IRepositories\IClienteRepository.cs" />
-    <Compile Include="IRepositories\IEmpleadoRepository.cs" />
-    <Compile Include="IRepositories\IEncomiendaRepository.cs" />
-    <Compile Include="IRepositories\ILugarViajeRepository.cs" />
-    <Compile Include="IRepositories\IUnityOfWork.cs" />
-    <Compile Include="IRepositories\IVentaRepository.cs" />
-    <Compile Include="IRepositories\IRepository.cs" />
-    <Compile Include="IRepositories\IServicioRepository.cs" />
-    <Compile Include="IRepositories\ITipoComprobante.cs" />
-    <Compile Include="IRepositories\ITipoLugarRepository.cs" />
-    <Compile Include="IRepositories\ITipoPagoRepository.cs" />
-    <Compile Include="IRepositories\ITipoTripulacionRepository.cs" />
-    <Compile Include="IRepositories\ITipoViajeRepository.cs" />
-    <Compile Include="IRepositories\ITransporteRepository.cs" />
-    <Compile Include="IRepositories\ITripulacionRepository.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

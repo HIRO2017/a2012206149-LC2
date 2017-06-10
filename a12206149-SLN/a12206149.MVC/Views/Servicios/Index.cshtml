@@ -1,0 +1,40 @@
+﻿@model IEnumerable<a12206149_ENT.Entities.Servicio>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreServicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreServicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.servicioId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.servicioId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.servicioId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -65,6 +65,10 @@
     <Compile Include="Migrations\201706100157263_agregar empleado.Designer.cs">
       <DependentUpon>201706100157263_agregar empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706100713411_mvc.cs" />
+    <Compile Include="Migrations\201706100713411_mvc.Designer.cs">
+      <DependentUpon>201706100713411_mvc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AdministradorRepository.cs" />
@@ -95,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706100157263_agregar empleado.resx">
       <DependentUpon>201706100157263_agregar empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706100713411_mvc.resx">
+      <DependentUpon>201706100713411_mvc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

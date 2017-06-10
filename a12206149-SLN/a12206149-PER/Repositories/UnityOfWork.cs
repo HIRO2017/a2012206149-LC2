@@ -49,15 +49,15 @@ namespace a12206149_PER.Repositories
             Administrativos = new AdministrartivoRepository(_Context);
             Buses = new BusRepository(_Context);
             Clientes = new ClienteRepository(_Context);
-            Empleados = new EmpleadoRepository(_Context);
+           // Empleados = new EmpleadoRepository(_Context);
             Encomiendas = new EncomiendaRepository(_Context);
             LugarViajes = new LugarViajeRepository(_Context);
-            TipoPagos = new TipoPagoRepository(_Context);
-            TipoViajes = new TipoViajeRepository(_Context);
+          //  TipoPagos = new TipoPagoRepository(_Context);
+           // TipoViajes = new TipoViajeRepository(_Context);
             Transporte = new TransporteRepository(_Context);
             Tripulacion = new TripulacionRepository(_Context);
             Ventas = new VentaRepository(_Context);
-            TipoTripulaciones = new TipoTripulacionRepository(_Context);
+           // TipoTripulaciones = new TipoTripulacionRepository(_Context);
 
         }
 
